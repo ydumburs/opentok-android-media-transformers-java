@@ -1,4 +1,4 @@
-OpenTok Android Media Transformers Java Sample
+OpenTok Android Media Transformers Java 
 ======================
 
 This sample is based on [Media-Transformers-Java](https://github.com/opentok/opentok-android-sdk-samples/tree/main/Media-Transformers-Java).
