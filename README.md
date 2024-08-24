@@ -9,7 +9,7 @@ Changes Made
 
 How It Works
 ======================
-* Clicking the `BLUR` button applies a `High` strength blur. Clicking it increases the blur with a custom radius of `30px`.
+* Clicking the `BLUR` button applies a `High (10px)` strength blur. Clicking it increases the blur with a custom radius of `30px`.
 * Clicking the `VIRTUAL` button applies a background image. Clicking it again will change the background to another image.
 
 How to Launch the App
