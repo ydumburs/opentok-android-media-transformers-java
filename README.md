@@ -19,3 +19,29 @@ Open the project folder in Android Studio. Set a session credentials in the conf
 App Screenshots
 ======================
 <img width="200" alt="Screenshot 2024-08-23 at 3 05 20 PM" src="https://github.com/user-attachments/assets/74b1eb9f-66f4-4459-952f-a19379abba78">
+
+Added Code and Layout Details
+======================
+# MainActivity.java
+## Blur button
+Use a boolean flag `isBlurHigh` to toggle between 2 blur levels. If `isBlurHigh` is true, the blur level is set to "10" (=preset level `High`); if false, it’s set to "30". It also toggles the text on a button id `setbackgroundblur` between "Blur" and "Blur2".
+```
+private boolean isBlurHigh = true;
+    public void SetBackgroundBlurAndCustomTransformers(View view) {
+        videoTransformers.clear();
+        String blurLevel = isBlurHigh ? "10" : "30";
+        String blurText = isBlurHigh ? "Blur" : "Blur2";
+        Button blurToggle = findViewById(R.id.setbackgroundblur);
+        blurToggle.setText(blurText);
+        PublisherKit.VideoTransformer backgroundBlur = publisher.new VideoTransformer("BackgroundBlur", "{\"radius\":\"Custom\",\"custom_radius\":\"" + blurLevel + "\"}");
+        PublisherKit.VideoTransformer myCustomTransformer = publisher.new VideoTransformer("myTransformer", watermarkTransformer);
+        videoTransformers.add(backgroundBlur);
+        videoTransformers.add(myCustomTransformer);
+        publisher.setVideoTransformers(videoTransformers);
+        isBlurHigh = !isBlurHigh;
+        buttonBlur.setBackgroundColor(Color.GREEN);
+        buttonVirtualBackground.setBackgroundColor(Color.RED);
+    }
+```
+Original code: https://github.com/opentok/opentok-android-sdk-samples/blob/0f23c71d191fc29af233789f8d55f242896457e5/Media-Transformers-Java/app/src/main/java/com/tokbox/sample/mediatransformers/MainActivity.java#L389
+
