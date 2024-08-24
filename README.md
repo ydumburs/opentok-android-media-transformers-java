@@ -23,7 +23,7 @@ App Screenshots
 Added Code and Layout Details
 ======================
 1. MainActivity.java
-* Blur button functionality
+**Blur button functionality**  
 Use a boolean flag `isBlurHigh` to toggle between 2 blur levels. If `isBlurHigh` is true, the blur level is set to "10" (=preset level `High`); if false, it’s set to "30". It also toggles the text on a button id `setbackgroundblur` between "Blur" and "Blur2".　Original code [MainActivity.java#L389](https://github.com/opentok/opentok-android-sdk-samples/blob/0f23c71d191fc29af233789f8d55f242896457e5/Media-Transformers-Java/app/src/main/java/com/tokbox/sample/mediatransformers/MainActivity.java#L389)
 ```
 private boolean isBlurHigh = true;
