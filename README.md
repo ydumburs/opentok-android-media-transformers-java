@@ -21,10 +21,10 @@ App Screenshots
 ======================
 <img width="200" alt="Screenshot 2024-08-23 at 3 05 20 PM" src="https://github.com/user-attachments/assets/74b1eb9f-66f4-4459-952f-a19379abba78">
 
-Added Code and Layout Details
+Added Changes Details
 ======================  
 ## **Blur button functionality**  
-Use a boolean flag `isBlurHigh` to toggle between 2 blur levels. If `isBlurHigh` is true, the blur level is set to "10" (=preset level `High`); if false, it’s set to "30". It also toggles the text on a button id `setbackgroundblur` between "Blur" and "Blur2". For comparison, see the original code: [MainActivity.java#L389](https://github.com/opentok/opentok-android-sdk-samples/blob/0f23c71d191fc29af233789f8d55f242896457e5/Media-Transformers-Java/app/src/main/java/com/tokbox/sample/mediatransformers/MainActivity.java#L389))
+Use a boolean flag `isBlurHigh` to toggle between 2 blur levels. If `isBlurHigh` is true, the blur level is set to "10" (=preset level `High`); if false, it’s set to `30`. It also toggles the text on a button id `setbackgroundblur` between `Blur` and `Blur2`. For comparison, see the original code: [MainActivity.java#L389](https://github.com/opentok/opentok-android-sdk-samples/blob/0f23c71d191fc29af233789f8d55f242896457e5/Media-Transformers-Java/app/src/main/java/com/tokbox/sample/mediatransformers/MainActivity.java#L389))
 ```
 // in MainActivity.java
 private boolean isBlurHigh = true;
@@ -45,7 +45,7 @@ private boolean isBlurHigh = true;
     }
 ```
 ## **Virtual button functionality**  
-Use a boolean flag `isBeachImage` to switch between two background images. If `isBeachImage` is true, it uses `beachImageFile`; if false, it uses `meetingImageFile`. It also updates the text of a button with ID `setbackgroundreplacement` to "Virtual" if isBeachImage is true, or "Virtual2" if false. For comparison, see the original code: [MainActivity.java#L400](https://github.com/opentok/opentok-android-sdk-samples/blob/0f23c71d191fc29af233789f8d55f242896457e5/Media-Transformers-Java/app/src/main/java/com/tokbox/sample/mediatransformers/MainActivity.java#L400).
+Use a boolean flag `isBeachImage` to switch between two background images. If `isBeachImage` is true, it uses `beachImageFile`; if false, it uses `meetingImageFile`. It also updates the text of a button with ID `setbackgroundreplacement` to `Virtual` if `isBeachImage` is true, or `Virtual2` if false. For comparison, see the original code: [MainActivity.java#L400](https://github.com/opentok/opentok-android-sdk-samples/blob/0f23c71d191fc29af233789f8d55f242896457e5/Media-Transformers-Java/app/src/main/java/com/tokbox/sample/mediatransformers/MainActivity.java#L400).
 ```
 // in MainActivity.java
 private boolean isBeachImage = true;
@@ -68,7 +68,7 @@ private boolean isBeachImage = true;
         buttonBlur.setBackgroundColor(Color.RED);
     }
 ```
-Loads a drawable image resource into a Bitmap, then saves this bitmap as a PNG file in the app's internal storage directory, handling any potential I/O errors.
+Define another Bitmap for the newly added image file. Loads a drawable image resource into a Bitmap, then saves this bitmap as a PNG file in the app's internal storage directory, handling any potential I/O errors.
 ```
 Bitmap bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.meeting); 
         meetingImageFile = new File(context.getFilesDir(), resourceName + ".png");
